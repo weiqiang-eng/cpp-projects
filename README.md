@@ -1,58 +1,52 @@
-# macOS C++ Project Setup Instructions with CMake
-
-This guide will help you set up a C++ project on macOS using CMake.
+# Conan Workflow Instructions for macOS
 
 ## Prerequisites
+- Ensure you have [Homebrew](https://brew.sh/) installed on your macOS.
 
-1. **Install Xcode:** Download and install Xcode from the Mac App Store.
-2. **Install CMake:** You can install CMake using Homebrew:
-   ```bash
-   brew install cmake
-   ```
+## Step 1: Install Conan
 
-## Project Setup
+Run the following command in your terminal:
+```bash
+brew install conan
+```
 
-1. **Create a new directory for your project:**  
-   ```bash
-   mkdir MyCMakeProject
-   cd MyCMakeProject
-   ```
+## Step 2: Create a Conan Profile
 
-2. **Create a `CMakeLists.txt` file:**  
-   This file will contain the configuration for CMake. Here’s a simple example:
-   ```cmake
-   cmake_minimum_required(VERSION 3.10)
-   project(MyProject)
+Create a default profile with the following command:
+```bash
+conan profile new default --detect
+```
 
-   add_executable(MyExecutable main.cpp)
-   ```
+## Step 3: Setting Up Your Project
 
-3. **Create a simple C++ source file:**  
-   Create a file named `main.cpp` in the same directory:
-   ```cpp
-   #include <iostream>
+Navigate to your project directory and create a `conanfile.txt` with the necessary dependencies:
 
-   int main() {
-       std::cout << "Hello, CMake!" << std::endl;
-       return 0;
-   }
-   ```
+```text
+[requires]
+<your-dependency>
 
-4. **Build the project:**  
-   Run the following commands to generate the build files and compile the project:
-   ```bash
-   mkdir build
-   cd build
-   cmake ..
-   make
-   ```
+[generators]
+cmake
+```
 
-5. **Run the executable:**  
-   After a successful build, run your project:
-   ```bash
-   ./MyExecutable
-   ```
+## Step 4: Install Dependencies
 
-## Conclusion
+Run the command below to install the dependencies defined in `conanfile.txt`:
+```bash
+conan install .
+```
 
-You have set up a basic C++ project using CMake on macOS. You can now start developing your application!
+## Step 5: Build Your Project
+
+Use CMake to build your project:
+```bash
+mkdir build && cd build
+cmake ..
+cmake --build .
+```
+
+## Additional Notes
+- Make sure to customize `<your-dependency>` with the libraries you require. 
+- You may add different configurations in the profile as needed.
+
+Following these steps will set up a complete Conan workflow for your C++ projects on macOS without any external dependencies, ensuring a streamlined development process.
