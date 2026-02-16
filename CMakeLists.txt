@@ -1,13 +1,1 @@
-# CMakeLists.txt for a basic C++ project
-
-cmake_minimum_required(VERSION 3.10)
-
-# Specify the project name
-project(MyCppProject)
-
-# Set the C++ standard
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
-
-# Add the executable
-add_executable(my_executable main.cpp)
+cmake_minimum_required(VERSION 3.10)\nproject(MyCppProject)\n\nset(CMAKE_CXX_STANDARD 17)\nset(CMAKE_CXX_STANDARD_REQUIRED ON)\n\nadd_executable(MyCppProject main.cpp)
