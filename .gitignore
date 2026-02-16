@@ -1,0 +1,8 @@
+# Exclude Conan build artifacts
+
+# Build directory
+build/
+
+# Conan files
+conanbuild.cmake
+conaninfo.txt
