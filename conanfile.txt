@@ -1,0 +1,5 @@
+[requires]
+# No dependencies
+
+[generators]
+cmake
