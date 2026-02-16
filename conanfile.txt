@@ -2,4 +2,5 @@
 # No dependencies
 
 [generators]
-cmake
+CMakeToolchain
+CMakeDeps
