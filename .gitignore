@@ -1,8 +1,22 @@
-# Exclude Conan build artifacts
+# Conan
+conan.lock
+generators/
 
-# Build directory
+# CMake
 build/
+cmake_build_debug/
+cmake_build_release/
+CMakeUserPresets.json
 
-# Conan files
-conanbuild.cmake
-conaninfo.txt
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+*.o
+*.a
+*.so

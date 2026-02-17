@@ -1,6 +1,0 @@
-[requires]
-# No dependencies
-
-[generators]
-CMakeToolchain
-CMakeDeps
