@@ -13,6 +13,8 @@ include(${CMAKE_BINARY_DIR}/generators/conandeps.cmake OPTIONAL)
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 add_executable(my_app ${SOURCES})
 
+add_subdirectory(leetcode)
+
 # Enable compiler warnings
 if(MSVC)
     target_compile_options(my_app PRIVATE /W4)
