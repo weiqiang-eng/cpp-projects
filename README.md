@@ -79,7 +79,7 @@ build_type=Release
 
 View your profile to confirm:
 ```bash
-conan profile show default
+conan profile show -pr=default
 ```
 
 ### Step 5: Create Project Directory
