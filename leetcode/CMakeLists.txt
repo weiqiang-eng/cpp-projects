@@ -9,6 +9,15 @@ file(GLOB_RECURSE LEETCODE_SOURCES
     "dp/*.cpp"
     "sliding_window/*.cpp"
     "two_pointers/*.cpp"
+    "stack/*.cpp"
+    "linked_list/*.cpp"
+    "binary_search/*.cpp"
+    "backtracking/*.cpp"
+    "greedy/*.cpp"
+    "matrix/*.cpp"
+    "heap/*.cpp"
+    "bit_manipulation/*.cpp"
+    "intervals/*.cpp"
 )
 
 foreach(src ${LEETCODE_SOURCES})
