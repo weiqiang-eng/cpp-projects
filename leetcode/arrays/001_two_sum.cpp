@@ -31,6 +31,6 @@ public:
 int main() {
     Solution sol;
     vector<int> nums = {2, 7, 8, 11, 15};
-    auto res = sol.twoSumBruteForce(nums, 9);
+    auto res = sol.twoSum(nums, 9);
     cout << "[" << res[0] << ", " << res[1] << "]\n"; // [0, 1]
 }

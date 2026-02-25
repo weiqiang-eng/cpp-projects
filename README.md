@@ -356,10 +356,9 @@ int main() {
 ```bash
 rm -rf build conan.lock
 mkdir build
-cd build
-conan install .. --build=missing --output-folder=.
-cmake .. -DCMAKE_BUILD_TYPE=Release
-cmake --build .
+conan install . --build=missing -s build_type=Release
+cmake --preset conan-release
+cmake --build build/Release or cmake --build --preset conan-release
 ./my_app
 ```
 
